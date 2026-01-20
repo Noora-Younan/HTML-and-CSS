@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noora Younan | Bold Portfolio</title>
+<style>
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Bold Fonts */
+    background-color: #f0f0f0;
+    color: #000;
+    padding-top: 80px;
+  }
+
+  /* FIXED NAVBAR */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000; /* Background Color */
+    border-bottom: 5px solid #ff0000; /* Red Border */
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  nav li {
+    float: left;
+  }
+
+  nav li a {
+    display: block;
+    color: #fff; /* Font Color */
+    text-align: center;
+    padding: 25px 40px;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  nav li a:hover {
+    background-color: #ff0000; /* Hover Background */
+    color: #fff; /* Hover Text */
+  }
+
+  /* VIDEO SECTION WITH TEXT OVERLAY */
+  .hero {
+    position: relative;
+    border-bottom: 8px solid #000;
+  }
+
+  video {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%) contrast(150%);
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff0000;
+    color: #fff;
+    padding: 30px 60px;
+    font-size: 50px;
+    border: 5px solid #000;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 0px #000;
+  }
+
+  /* TWO COLUMN LAYOUT */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+  }
+
+  .grid-item {
+    height: 450px; /* Specific Height */
+    padding: 60px;
+    border-bottom: 5px solid #000;
+  }
+
+  .left-col {
+    background-color: #fff;
+    border-right: 5px solid #000;
+  }
+
+  .right-col {
+    background-color: #000;
+    color: #fff; /* White text on black */
+  }
+
+  .grid-item h2 { 
+      text-transform: uppercase; 
+      font-size: 3.5rem; 
+      margin: 0 0 20px 0; 
+  }
+  
+  .grid-item p { 
+    font-family: 'Helvetica', sans-serif; 
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: inherit; /* Font Color inside columns */
+  }
+
+  /* Hover for Paragraphs */
+  p:hover {
+    background-color: #ff0000;
+    color: #fff !important;
+    padding: 10px;
+  }
+
+  /* IMAGE SECTION */
+  .gallery {
+    padding: 80px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 5px solid #000;
+  }
+
+  /* Filtered, Centered, Rounded Image */
+  .gallery img {
+    display: block;
+    margin: 0 auto; /* Center Image */
+    width: 500px;
+    border-radius: 10px; /* Rounded Edges */
+    filter: invert(10%) contrast(120%); /* CSS Filter */
+    border: 5px solid #000;
+    box-shadow: 15px 15px 0px #ff0000;
+  }
+
+  /* IMAGE OVERLAY FADE */
+  .fade-box {
+    position: relative;
+    width: 500px;
+    margin: 60px auto;
+    border: 5px solid #000;
+  }
+
+  .fade-box img {
+    width: 100%;
+    display: block;
+  }
+
+  .overlay-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #ff0000;
+  }
+
+  .fade-box:hover .overlay-div {
+    opacity: 0.9;
+  }
+
+  .overlay-content {
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* TABLE */
+  .data-area {
+    padding: 60px;
+    background-color: #f5f5f5;
+  }
+
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid #000; /* Border */
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    background-color: #fff;
+  }
+
+  th, td {
+    border: 2px solid #000;
+    padding: 25px; /* Padding */
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  tr:first-child {
+    background-color: #000; /* Top row background */
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px;
+    text-align: center; /* Centered */
+    font-weight: bold; /* Bold */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-top: 10px solid #ff0000;
+    font-size: 1.5rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#">Noora Younan</a></li>
+    <li><a href="#">Work</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://player.vimeo.com/external/315512217.sd.mp4?s=330c0087093284646738c823df7a7995180f63a0&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+  </video>
+  <div class="hero-text">NOORA YOUNAN</div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item left-col">
+    <h2>Strategy</h2>
+    <p>We do not decorate. We design for function and bold impact. Hover over this text.</p>
+  </div>
+  <div class="grid-item right-col">
+    <h2>Execution</h2>
+    <p>High contrast. Sharp edges. No compromise. This is the new standard.</p>
+  </div>
+</div>
+
+<div class="fade-box">
+  <img src="https://images.pexels.com/photos/3052727/pexels-photo-3052727.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Building">
+  <div class="overlay-div">
+    <div class="overlay-content">Architecture</div>
+  </div>
+</div>
+
+<div class="gallery">
+  <h2 style="font-size: 3rem; margin-bottom: 30px;">PERSPECTIVE</h2>
+  <img src="https://images.pexels.com/photos/1578248/pexels-photo-1578248.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Abstract">
+</div>
+
+<div class="data-area">
+  <table>
+    <tr>
+      <th>Client</th>
+      <th>Project Type</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>Studio X</td>
+      <td>Rebranding</td>
+      <td>2025</td>
+    </tr>
+    <tr>
+      <td>Agency Y</td>
+      <td>Web Dev</td>
+      <td>2026</td>
+    </tr>
+  </table>
+</div>
+
+<footer>
+  © 2026 Noora Younan. All Rights Reserved.
+</footer>
+
+</body>
+</html>
